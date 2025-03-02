@@ -1,0 +1,46 @@
+PS D:\Facultate\NLP> python sentiment_classifier.py --model PERCEPTRON --feats UNIGRAM > output.txt
+    Namespace(model='PERCEPTRON', feats='UNIGRAM', train_path='data/train.txt', dev_path='data/dev.txt', blind_test_path='data/test-blind.txt', test_output_path='test-blind.output.txt', run_on_test=True)
+    6920 / 872 / 1821 train/dev/test examples
+    =====Train Accuracy=====
+    Accuracy: 6845 / 6920 = 0.989162
+    Precision (fraction of predicted positives that are correct): 3558 / 3581 = 0.993577; Recall (fraction of true positives predicted correctly): 3558 / 3610 = 0.985596; F1 (harmonic mean of precision and recall): 0.989570
+    =====Dev Accuracy=====
+    Accuracy: 668 / 872 = 0.766055
+    Precision (fraction of predicted positives that are correct): 350 / 460 = 0.760870; Recall (fraction of true positives predicted correctly): 350 / 444 = 0.788288; F1 (harmonic mean of precision and recall): 0.774336
+    Time for training and evaluation: 2.70 seconds
+
+
+PS D:\Facultate\NLP> python sentiment_classifier.py --model LR --feats UNIGRAM >> output.txt
+    Namespace(model='LR', feats='UNIGRAM', train_path='data/train.txt', dev_path='data/dev.txt', blind_test_path='data/test-blind.txt', test_output_path='test-blind.output.txt', run_on_test=True)
+    6920 / 872 / 1821 train/dev/test examples
+    =====Train Accuracy=====
+    Accuracy: 6859 / 6920 = 0.991185
+    Precision (fraction of predicted positives that are correct): 3560 / 3571 = 0.996920; Recall (fraction of true positives predicted correctly): 3560 / 3610 = 0.986150; F1 (harmonic mean of precision and recall): 0.991505
+    =====Dev Accuracy=====
+    Accuracy: 679 / 872 = 0.778670
+    Precision (fraction of predicted positives that are correct): 347 / 443 = 0.783296; Recall (fraction of true positives predicted correctly): 347 / 444 = 0.781532; F1 (harmonic mean of precision and recall): 0.782413
+    Time for training and evaluation: 3.03 seconds
+
+
+PS D:\Facultate\NLP> python sentiment_classifier.py --model LR --feats BIGRAM >> output.txt 
+    Namespace(model='LR', feats='BIGRAM', train_path='data/train.txt', dev_path='data/dev.txt', blind_test_path='data/test-blind.txt', test_output_path='test-blind.output.txt', run_on_test=True)
+    6920 / 872 / 1821 train/dev/test examples
+    =====Train Accuracy=====
+    Accuracy: 6920 / 6920 = 1.000000
+    Precision (fraction of predicted positives that are correct): 3610 / 3610 = 1.000000; Recall (fraction of true positives predicted correctly): 3610 / 3610 = 1.000000; F1 (harmonic mean of precision and recall): 1.000000
+    =====Dev Accuracy=====
+    Accuracy: 642 / 872 = 0.736239
+    Precision (fraction of predicted positives that are correct): 350 / 486 = 0.720165; Recall (fraction of true positives predicted correctly): 350 / 444 = 0.788288; F1 (harmonic mean of precision and recall): 0.752688
+    Time for training and evaluation: 4.14 seconds
+
+
+PS D:\Facultate\NLP> python sentiment_classifier.py --model LR --feats BETTER >> output.txt
+    Namespace(model='LR', feats='BETTER', train_path='data/train.txt', dev_path='data/dev.txt', blind_test_path='data/test-blind.txt', test_output_path='test-blind.output.txt', run_on_test=True)
+    6920 / 872 / 1821 train/dev/test examples
+    =====Train Accuracy=====
+    Accuracy: 6864 / 6920 = 0.991908
+    Precision (fraction of predicted positives that are correct): 3582 / 3610 = 0.992244; Recall (fraction of true positives predicted correctly): 3582 / 3610 = 0.992244; F1 (harmonic mean of precision and recall): 0.992244
+    =====Dev Accuracy=====
+    Accuracy: 672 / 872 = 0.770642
+    Precision (fraction of predicted positives that are correct): 365 / 486 = 0.751029; Recall (fraction of true positives predicted correctly): 365 / 444 = 0.822072; F1 (harmonic mean of precision and recall): 0.784946
+    Time for training and evaluation: 3.43 seconds
